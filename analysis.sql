@@ -1,33 +1,8 @@
 CREATE DATABASE superstore_project;
 USE superstore_project;
-CREATE TABLE orders (
-    ship_mode VARCHAR(50),
-    segment VARCHAR(50),
-    country VARCHAR(50),
-    city VARCHAR(50),
-    state VARCHAR(50),
-    postal_code VARCHAR(20),
-    region VARCHAR(50),
-    category VARCHAR(50),
-    sub_category VARCHAR(50),
-    sales DECIMAL(10,2),
-    quantity INT,
-    discount DECIMAL(5,2),
-    profit DECIMAL(10,2)
-);
-SELECT * FROM orders LIMIT 5;
+
 SELECT * FROM superstore_project.samplesuperstore LIMIT 5;
-SET GLOBAL local_infile = 1;
-LOAD DATA LOCAL INFILE 'C:\Users\HP\Documents\SQL\archive (2)\SampleSuperstore.csv'
-INTO TABLE superstore_project.orders
-FIELDS TERMINATED BY ','
-ENCLOSED BY '"'
-LINES TERMINATED BY '\n'
-IGNORE 1 ROWS;
 
-TRUNCATE TABLE superstore_project.orders;
-
-SELECT COUNT(*) FROM superstore_project.orders;
 SELECT COUNT(*) FROM superstore_project.samplesuperstore;
 SELECT * FROM superstore_project.samplesuperstore LIMIT 5;
 select  Category, Round(SUM(Sales),2) as Total_Sales,Round(sum(Profit),2) as Total_Profit From superstore_project.samplesuperstore
