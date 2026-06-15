@@ -28,5 +28,10 @@ This project analyzes the Sample Superstore dataset using SQL and Power BI to id
 - Used `GROUP BY` for aggregated sales/profit analysis across categories, regions, and segments.
 - Used `RANK() OVER (PARTITION BY ...)` to rank sub-category profitability within each category.
 
+## Project Files
+- `analysis.sql` - SQL queries (GROUP BY, Window Functions)
+- `Superstore_Analysis.ipynb` - Python (Pandas) analysis with visualizations
+- `dashboard.png` - Power BI dashboard
+
 ## Recommendation
 Reduce discount rates on Tables and Furniture (especially in the Central region) to improve overall profitability without significantly impacting sales volume.
